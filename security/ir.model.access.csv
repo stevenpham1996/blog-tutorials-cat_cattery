@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_cat_breeder_kittens,cat_breeder.kittens,model_cat_breeder_kittens,base.group_user,1,1,1,1
+access_cat_breeder_kitten,cat_breeder.kitten,model_cat_breeder_kitten,base.group_user,1,1,1,1

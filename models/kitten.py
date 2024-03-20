@@ -1,8 +1,8 @@
 from odoo import models, fields, api
 
 
-class Kittens(models.Model):
-    _name = 'cat_breeder.kittens'
+class Kitten(models.Model):
+    _name = 'cat_breeder.kitten'
     _description = 'Available Kittens'
 
     name = fields.Char("Name")

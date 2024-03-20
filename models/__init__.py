@@ -1,1 +1,1 @@
-from . import kittens
+from . import kitten
