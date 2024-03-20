@@ -15,14 +15,13 @@
     </record>
 -->
 
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="cat_breeder.action_window">
-      <field name="name">cat_breeder window</field>
-      <field name="res_model">cat_breeder.cat_breeder</field>
+    <!-- Action to open the Book list -->
+    <record id="action_library_book" model="ir.actions.act_window">
+      <field name="name">Library Books</field>
+      <field name="res_model">library.book</field>
       <field name="view_mode">tree,form</field>
     </record>
--->
+
 
     <!-- server action to the one above -->
 <!--
@@ -39,19 +38,5 @@
       </field>
     </record>
 -->
-
-    <!-- Top menu item -->
-
-    <menuitem name="Feline Breeder" id="cat_breeder.menu_root"/>
-
-    <!-- menu categories -->
-
-    <menuitem name="Records" id="cat_breeder.menu_1" parent="cat_breeder.menu_root"/>
-
-    <!-- actions -->
-
-    <menuitem name="Kittens" id="cat_breeder.menu_1_list" parent="cat_breeder.menu_1"
-              action="cat_breeder.action_window"/>
-
   </data>
 </odoo>

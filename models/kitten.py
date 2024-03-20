@@ -7,7 +7,7 @@ class Kitten(models.Model):
 
     name = fields.Char("Name")
     breed = fields.Char("Breed", required=True)
-    gender = fields.Selection("Gender", [('male', 'Male'), ('female', 'Female')], required=True)
+    gender = fields.Selection(selection=[('male', 'Male'), ('female', 'Female')], string="Gender",  required=True)
     birth_date = fields.Date("Birth Date", required=True)
     color = fields.Char("Color")
     
