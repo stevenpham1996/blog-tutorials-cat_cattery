@@ -41,20 +41,17 @@
 -->
 
     <!-- Top menu item -->
-<!--
-    <menuitem name="cat_breeder" id="cat_breeder.menu_root"/>
--->
+
+    <menuitem name="Feline Breeder" id="cat_breeder.menu_root"/>
+
     <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="cat_breeder.menu_1" parent="cat_breeder.menu_root"/>
-    <menuitem name="Menu 2" id="cat_breeder.menu_2" parent="cat_breeder.menu_root"/>
--->
+
+    <menuitem name="Records" id="cat_breeder.menu_1" parent="cat_breeder.menu_root"/>
+
     <!-- actions -->
-<!--
-    <menuitem name="List" id="cat_breeder.menu_1_list" parent="cat_breeder.menu_1"
+
+    <menuitem name="Kittens" id="cat_breeder.menu_1_list" parent="cat_breeder.menu_1"
               action="cat_breeder.action_window"/>
-    <menuitem name="Server to list" id="cat_breeder" parent="cat_breeder.menu_2"
-              action="cat_breeder.action_server"/>
--->
+
   </data>
 </odoo>
