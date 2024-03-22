@@ -22,7 +22,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/breeder_menus.xml',
-        # 'views/views.xml',
+        'views/breeder_kitten_views.xml',
+        'views/breeder_kitten_list_template.xml',
         # 'views/templates.xml',
     ],
     'application': True,

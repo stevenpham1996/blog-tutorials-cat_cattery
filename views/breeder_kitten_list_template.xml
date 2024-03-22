@@ -1,0 +1,15 @@
+<odoo>
+    <template id="breeder_kitten_list_template" name="breeder_kitten_list">
+        <div id="wrap" class="container">
+            <h1>Kittens</h1>
+            <t t-foreach="kittens" t-as="kitten">
+                <div class="row">
+                    <span t-field="kitten.name" />,
+                    <span t-field="kitten.breed" />,
+                    <span t-field="kitten.age" />
+                    <span t-field="kitten.temperament" />
+                </div>
+            </t>
+        </div>
+    </template>
+</odoo>
