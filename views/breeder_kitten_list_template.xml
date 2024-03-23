@@ -7,6 +7,7 @@
                     <span t-field="kitten.name" />,
                     <span t-field="kitten.breed" />,
                     <span t-field="kitten.age" />
+                    <span t-field="kitten.color" />
                     <span t-field="kitten.temperament" />
                 </div>
             </t>

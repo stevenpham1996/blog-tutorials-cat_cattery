@@ -1,17 +1,15 @@
 <odoo>
     <!-- Top menu item -->
-    <menuitem name="Cat Cattery" id="cat_breeder"/>
-    <!-- menu categories -->
-    <!-- <menuitem name="Kittens" id="breeder.menu_1" parent="breeder.menu_root"/> -->
-    <!-- Action to open the Book list -->
-    <record id="action_breeder_kitten" model="ir.actions.act_window">
-        <field name="name">Kittens</field>
-        <field name="res_model">cat_breeder.kitten</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-    <!-- actions -->
-    <menuitem name="Kittens" id="menu_breeder_kitten" parent="cat_breeder"
-            action="action_breeder_kitten"/>
+    <menuitem id="cat_breeder" name="Cat Cattery">
+        <menuitem id="cat_breeder_first_level_menu" name="Kittens" sequence="5">
+            <!-- action item -->
+            <menuitem id="cat_breeder_kitten_action" action="action_breeder_kitten" sequence="5"/>
+        </menuitem>
+        <menuitem id="cat_breeder_second_level_menu" name="Breeds" sequence="10">
+            <!-- action item -->
+            <menuitem id="cat_breeder_breed_action" action="action_breeder_breed" sequence="5"/>
+        </menuitem>
+    </menuitem>
 </odoo>
 
 <!-- <menuitem id="cat_breeder_menu_root" name="Feline Breeder">

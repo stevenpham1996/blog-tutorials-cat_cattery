@@ -50,7 +50,7 @@
   </record>
 
   <!-- Search -->
-  <record id="view_search_book" model="ir.ui.view">
+  <record id="view_search_kitten" model="ir.ui.view">
     <field name="name">breeder.kitten.search</field>
     <field name="model">cat_breeder.kitten</field>
     <field name="arch" type="xml">
@@ -61,4 +61,15 @@
     </field>
   </record>
 
+  <!-- Action -->
+  <record id="action_breeder_kitten" model="ir.actions.act_window">
+      <field name="name">Kittens</field>
+      <field name="res_model">cat_breeder.kitten</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Showcase a kitten 
+        </p>
+    </field>
+  </record>
 </odoo>

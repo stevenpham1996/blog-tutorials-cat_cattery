@@ -10,8 +10,8 @@ class Kitten(models.Model):
     # --------------------------------------- Default Methods ----------------------------------
     def _default_birth_date(self):
         return (fields.Date.today() - relativedelta(weeks=8))
+    
     name = fields.Char("Name")
-    breed = fields.Char("Breed", required=True)
     gender = fields.Selection(selection=[('male', 'Male'), ('female', 'Female')], string="Gender",  required=True)
     birth_date = fields.Date(
         "Birth Date", 
@@ -33,6 +33,9 @@ class Kitten(models.Model):
     )
     image = fields.Binary("Kitten's Image")
     
+    # --------------------------------------- Relational Fields ----------------------------------
+    breed_id = fields.Many2one("cat_breeder.breed", string="Breed")
+
     # --------------------------------------- Computed Fields ----------------------------------
     age = fields.Integer(string="Weeks Old", compute="_compute_age")
     
