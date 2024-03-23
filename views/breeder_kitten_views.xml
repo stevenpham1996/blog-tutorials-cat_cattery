@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
   <!--tree -->
@@ -7,7 +8,7 @@
     <field name="arch" type="xml">
       <tree>
         <field name="name"/>
-        <field name="breed"/>
+        <field name="breed_id"/>
         <field name="gender"/>
         <field name="age"/>
       </tree>
@@ -34,7 +35,7 @@
           </div>
           <group>
             <group>
-              <field name="breed"/>
+              <field name="breed_id"/>
               <field name="gender"/>
               <field name="birth_date"/>
             </group>
@@ -55,7 +56,7 @@
     <field name="model">cat_breeder.kitten</field>
     <field name="arch" type="xml">
       <search>
-        <field name="breed"/>
+        <field name="breed_id"/>
         <filter name="filter_available" string="Available" domain="[('state', '=', 'available')]"/>
       </search>
     </field>

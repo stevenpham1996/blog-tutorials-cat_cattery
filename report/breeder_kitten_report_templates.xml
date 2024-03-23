@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <odoo>
     <template>
         <div class="page">
@@ -26,8 +28,7 @@
                         <span t-field="o.color" />
                     </div>
                     <div class="col-3">
-                        <span t-field="o.state" 
-                        t-options="[{'value': 'available', 'string': 'Available'}, {'value': 'adopted', 'string': 'Adopted'}]"/>
+                        <span t-field="o.state" />
                     </div>
                 </div>
             </t>

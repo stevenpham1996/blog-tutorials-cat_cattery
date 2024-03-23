@@ -21,10 +21,12 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/breeder_menus.xml',
         'views/breeder_kitten_views.xml',
+        'views/breeder_breed_views.xml',
         'views/breeder_kitten_list_template.xml',
-        # 'views/templates.xml',
+        'report/breeder_kitten_report.xml',
+        # 'report/breeder_kitten_report_templates.xml',
+        'views/breeder_menus.xml',
     ],
     'application': True,
     'license': 'LGPL-3',
