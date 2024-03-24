@@ -14,10 +14,10 @@
         <field name="dpi">90</field>
     </record>                              
     <record id="action_breeder_kitten_report" model="ir.actions.report">                                        
-      <field name="name">Kitten List</field>                                        
+      <field name="name">Kitten Report</field>                                        
       <field name="model">cat_breeder.kitten</field>                                        
       <field name="report_type">qweb-html</field>                                        
-      <field name="report_name">cat_breeder.kitten_list</field>                                        
+      <field name="report_name">cat_breeder.kitten_report</field>                                        
       <field name="binding_model_id" ref="model_cat_breeder_kitten"/>                                      
       <field name="binding_type">report</field>   
       <field name="paperformat_id" ref="paperformat_euro_landscape" />                                 

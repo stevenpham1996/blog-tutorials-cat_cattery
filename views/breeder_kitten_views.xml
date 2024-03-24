@@ -69,7 +69,7 @@
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
         <p class="o_view_nocontent_smiling_face">
-            Showcase a kitten 
+            Reveal a kitten 
         </p>
     </field>
   </record>
