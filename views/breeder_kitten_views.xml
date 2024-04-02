@@ -3,16 +3,16 @@
 
   <!--tree -->
   <record model="ir.ui.view" id="breeder_kitten_view_tree">
-    <field name="name">breeder.kitten.tree</field>
-    <field name="model">cat_breeder.kitten</field>
-    <field name="arch" type="xml">
-      <tree>
-        <field name="name"/>
-        <field name="breed_id"/>
-        <field name="gender"/>
-        <field name="age"/>
-      </tree>
-    </field>
+      <field name="name">breeder.kitten.tree</field>
+      <field name="model">cat_breeder.kitten</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="name"/>
+              <field name="breed_id"/>
+              <field name="gender"/>
+              <field name="age"/>
+          </tree>
+      </field>
   </record>
 <!-- Form -->
   <record model="ir.ui.view" id="breeder_kitten_view_form">
@@ -20,7 +20,6 @@
     <field name="model">cat_breeder.kitten</field>
     <field name="arch" type="xml">
       <form string="Kitten">
-        <field name="state" invisible="True"/>
         <header>
           <button name="action_adopt" string="Adopt me!" type="object" invisible="state != 'available'"/>
         </header>
@@ -31,9 +30,9 @@
             </h1>
           </div>
           <div>
-            <field name="image" widget="image"/> 
+            <field name="image" widget="image" style="max-width: 250px"/> 
           </div>
-          <group>
+          <group style="padding: 20px">
             <group>
               <field name="breed_id"/>
               <field name="gender"/>
@@ -44,29 +43,68 @@
               <field name="color"/>
               <field name="temperament"/>
             </group>
+            <group>
+              <field name="state"/>
+            </group>
           </group>
         </sheet>
       </form>
     </field>
   </record>
 
+  <!-- Kanban -->
+  <record id="breeder_kitten_view_kanban" model="ir.ui.view">
+      <field name="name">breeder.kitten.kanban</field>
+      <field name="model">cat_breeder.kitten</field>
+      <field name="arch" type="xml">
+          <kanban string="Kittens" default_group_by="breed_id" records_draggable="0" widget="many2one_tags">
+              <field name="state"/>
+              <templates>
+                  <t t-name="kanban-box">
+                      <div class="oe_kanban_global_click">
+                          <h3>
+                              <field name="name"/>
+                          </h3>
+                          <div>
+                              <field name="image" widget="image" style="max-width: 100px"/>
+                          </div>
+                          <div class="mt-1">
+                              Age: <field name="age"/> Weeks Old
+                          </div>
+                          <div>
+                              Gender: <field name="gender"/>
+                          </div>
+                          <div>
+                              Color: <field name="color"/>
+                          </div>
+                          <div t-if="record.state.raw_value == 'available'" class="text-center">
+                              <button name="action_adopt" string="Adopt me!" type="object"/>
+                          </div>
+                      </div>
+                  </t>
+              </templates>
+          </kanban>
+      </field>
+  </record>
+
+
   <!-- Search -->
   <record id="view_search_kitten" model="ir.ui.view">
-    <field name="name">breeder.kitten.search</field>
-    <field name="model">cat_breeder.kitten</field>
-    <field name="arch" type="xml">
-      <search>
-        <field name="breed_id"/>
-        <filter name="filter_available" string="Available" domain="[('state', '=', 'available')]"/>
-      </search>
-    </field>
+      <field name="name">breeder.kitten.search</field>
+      <field name="model">cat_breeder.kitten</field>
+      <field name="arch" type="xml">
+          <search>
+              <field name="breed_id"/>
+              <filter name="filter_available" string="Available" domain="[('state', '=', 'available')]"/>
+          </search>
+      </field>
   </record>
 
   <!-- Action -->
   <record id="action_breeder_kitten" model="ir.actions.act_window">
       <field name="name">Kittens</field>
       <field name="res_model">cat_breeder.kitten</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">tree,kanban,form</field>
       <field name="help" type="html">
         <p class="o_view_nocontent_smiling_face">
             Reveal a kitten 
@@ -74,3 +112,5 @@
     </field>
   </record>
 </odoo>
+
+

@@ -4,24 +4,24 @@
 
   <!--tree -->
   <record model="ir.ui.view" id="breeder_breed_view_tree">
-    <field name="name">breeder.breed.tree</field>
-    <field name="model">cat_breeder.breed</field>
-    <field name="arch" type="xml">
-      <tree>
-        <field name="name"/>
-      </tree>
+      <field name="name">breeder.breed.tree</field>
+      <field name="model">cat_breeder.breed</field>
+      <field name="arch" type="xml">
+          <tree>
+              <field name="name"/>
+          </tree>
     </field>
   </record>
 
 <!-- Form -->
   <record model="ir.ui.view" id="breeder_breed_view_form">
-    <field name="name">breeder.breed.form</field>
-    <field name="model">cat_breeder.breed</field>
-    <field name="arch" type="xml">
-      <form string="Breed">
-        <field name="name"/>
-      </form>
-    </field>
+      <field name="name">breeder.breed.form</field>
+      <field name="model">cat_breeder.breed</field>
+      <field name="arch" type="xml">
+          <form string="Breed">
+              <field name="name"/>
+          </form>
+      </field>
   </record>
 
   <!-- Search -->

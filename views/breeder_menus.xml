@@ -3,10 +3,12 @@
 <odoo>
     <!-- Top menu item -->
     <menuitem id="cat_breeder_menu_root" name="Cat Cattery">
+        <!-- first level menu -->
         <menuitem id="cat_breeder_first_level_menu" name="Kittens" sequence="5">
             <!-- action item -->
             <menuitem id="cat_breeder_kitten_action" action="action_breeder_kitten" sequence="5"/>
         </menuitem>
+        <!-- second level menu -->
         <menuitem id="cat_breeder_second_level_menu" name="Breeds" sequence="10">
             <!-- action item -->
             <menuitem id="cat_breeder_breed_action" action="action_breeder_breed" sequence="5"/>

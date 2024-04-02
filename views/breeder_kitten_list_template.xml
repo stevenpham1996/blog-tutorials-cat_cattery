@@ -3,14 +3,14 @@
 <odoo>
     <template id="breeder_kitten_list_template" name="breeder_kitten_list">
         <div id="wrap" class="container">
-            <h1>Kittens</h1>
+            <h1>Kittens For Adoption</h1>
             <t t-foreach="kittens" t-as="kitten">
-                <div class="row">
+                <div t-if="kitten.state == 'available'" class="row">
+                    <span t-field="kitten.image" t-options="{'widget': 'image', 'style': 'max-width: 100px'}" />
                     <span t-field="kitten.name" />,
-                    <span t-field="kitten.breed" />,
-                    <span t-field="kitten.age" />
+                    <span t-field="kitten.breed_id" />,
+                    <span t-field="kitten.age" /> Weeks Old,
                     <span t-field="kitten.color" />
-                    <span t-field="kitten.temperament" />
                 </div>
             </t>
         </div>

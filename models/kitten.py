@@ -1,16 +1,17 @@
 from odoo import models, fields, api
-from odoo.exceptions import ValidationError, UserError
+from odoo.exceptions import UserError
 from dateutil.relativedelta import relativedelta
 
 
 class Kitten(models.Model):
     _name = 'cat_breeder.kitten'
-    _description = 'Adoptable Kittens'
+    _description = 'Kittens'
     
     # --------------------------------------- Default Methods ----------------------------------
     def _default_birth_date(self):
         return (fields.Date.today() - relativedelta(weeks=8))
     
+    active = fields.Boolean("Active", default=True) 
     name = fields.Char("Name")
     gender = fields.Selection(selection=[('male', 'Male'), ('female', 'Female')], string="Gender",  required=True)
     birth_date = fields.Date(
@@ -19,10 +20,9 @@ class Kitten(models.Model):
         required=True)
     color = fields.Char("Color")
     temperament = fields.Char("Temperament")
-    active = fields.Boolean("Active", default=True) 
     state = fields.Selection(
         selection=[
-            ('not_available', "Not Available"),
+            ('not_available', "Not Arrived"),
             ("available", "Available"),
             ("adopted", "Adopted"), 
         ],           
@@ -47,10 +47,10 @@ class Kitten(models.Model):
 
     # --------------------------------------- Action Methods ----------------------------------
     def action_adopt(self):
-        for record in self:
-            if record.state == "adopted":
-                raise UserError("Sorry, the kitten has gotten a new home.")
-            elif record.state == "not_available":
-                raise UserError("The kitten has not yet arrived at the cattery, please wait.")
-            return record.write({"state": "adopted"})
-                
+        if self.state == "adopted":
+            raise UserError("Sorry, the kitten has gotten a new home.")
+        elif self.state == "not_available":
+            raise UserError("The kitten's not yet arrived at the cattery,\
+                but we've registered your interest, please wait.")
+        return self.write({"state": "adopted"})
+            
