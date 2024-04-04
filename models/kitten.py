@@ -1,5 +1,5 @@
 from odoo import models, fields, api
-from odoo.exceptions import UserError
+from odoo.exceptions import UserError, ValidationError
 from dateutil.relativedelta import relativedelta
 
 
@@ -35,7 +35,7 @@ class Kitten(models.Model):
     
     # --------------------------------------- Relational Fields ----------------------------------
     breed_id = fields.Many2one("cat_breeder.breed", string="Breed")
-
+    adopter_id = fields.Many2one("res.partner", string="Adopter")
     # --------------------------------------- Computed Fields ----------------------------------
     age = fields.Integer(string="Weeks Old", compute="_compute_age")
     
@@ -53,4 +53,12 @@ class Kitten(models.Model):
             raise UserError("The kitten's not yet arrived at the cattery,\
                 but we've registered your interest, please wait.")
         return self.write({"state": "adopted"})
-            
+     
+    # --------------------------------------- Constraints ----------------------------------
+    @api.constrains("state", "adopter_id")
+    def _check_adopter_id(self):
+        for record in self:
+            if record.state != "adopted" and record.adopter_id:
+                raise ValidationError("Only adopted kittens can have an adopter.")
+    
+                
