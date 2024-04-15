@@ -26,6 +26,7 @@
         'views/breeder_kitten_list_template.xml',
         'report/breeder_kitten_report_templates.xml',
         'report/breeder_kitten_report.xml',
+        'report/breeder_adopter_report.xml',
         'views/breeder_menus.xml',
     ],
     'application': True,

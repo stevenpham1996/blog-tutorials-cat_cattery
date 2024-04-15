@@ -21,7 +21,7 @@
     <field name="arch" type="xml">
       <form string="Kitten">
         <header>
-          <button name="action_adopt" string="Adopt me!" type="object" invisible="state != 'available'"/>
+          <button name="action_adopt" string="I've found a home!" type="object" invisible="state != 'available'"/>
         </header>
         <sheet>
           <div class="oe_title">
@@ -45,6 +45,9 @@
             </group>
             <group>
               <field name="state"/>
+            </group>
+            <group>
+              <field name="adopter_id"/>
             </group>
           </group>
         </sheet>
@@ -78,7 +81,7 @@
                               Color: <field name="color"/>
                           </div>
                           <div t-if="record.state.raw_value == 'available'" class="text-center">
-                              <button name="action_adopt" string="Adopt me!" type="object"/>
+                              <button name="action_adopt" string="I've found a home!" type="object"/>
                           </div>
                       </div>
                   </t>
