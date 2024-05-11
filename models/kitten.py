@@ -4,7 +4,7 @@ from dateutil.relativedelta import relativedelta
 
 
 class Kitten(models.Model):
-    _name = 'cat_breeder.kitten'
+    _name = 'cat_cattery.kitten'
     _description = 'Kittens'
     
     # --------------------------------------- Default Methods ----------------------------------
@@ -34,7 +34,7 @@ class Kitten(models.Model):
     image = fields.Binary("Kitten's Image")
     
     # --------------------------------------- Relational Fields ----------------------------------
-    breed_id = fields.Many2one("cat_breeder.breed", string="Breed")
+    breed_id = fields.Many2one("cat_cattery.breed", string="Breed")
     adopter_id = fields.Many2one("res.partner", string="Adopter")
     # --------------------------------------- Computed Fields ----------------------------------
     age = fields.Integer(string="Weeks Old", compute="_compute_age")

@@ -1,12 +1,12 @@
 from odoo import api, models
 
 class AdopterReport(models.AbstractModel):
-    _name = "report.cat_breeder.adopter_report"
+    _name = "report.cat_cattery.adopter_report"
     
     @api.model
     def _get_report_values(self, docids, data=None):
         domain = [("adopter_id", "in", docids)]
-        kittens = self.env["cat_breeder.kitten"].search(domain)
+        kittens = self.env["cat_cattery.kitten"].search(domain)
         adopters = kittens.mapped("adopter_id")
         adopter_kittens = [
                     (adopter,

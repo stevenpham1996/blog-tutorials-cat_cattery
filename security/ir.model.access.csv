@@ -1,3 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_cat_breeder_kitten,cat_breeder.kitten,model_cat_breeder_kitten,base.group_user,1,1,1,1
-access_cat_breeder_breed,cat_breeder.breed,model_cat_breeder_breed,base.group_user,1,1,1,1
+access_cat_cattery_kitten,cat_cattery.kitten,model_cat_cattery_kitten,base.group_user,1,1,1,1
+access_cat_cattery_breed,cat_cattery.breed,model_cat_cattery_breed,base.group_user,1,1,1,1

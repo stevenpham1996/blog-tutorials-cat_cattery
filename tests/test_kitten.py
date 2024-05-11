@@ -5,7 +5,7 @@ class TestKitten(TransactionCase):
         super().setUp(*args, **kwargs)
         user_admin = self.env.ref("base.user_admin")
         self.env = self.env(user=user_admin)
-        self.Kitten = self.env["cat_breeder.kitten"]
+        self.Kitten = self.env["cat_cattery.kitten"]
         self.kitten1 = self.Kitten.create({
         "name": "Zora",
         "breed": "Maine Coon"})
