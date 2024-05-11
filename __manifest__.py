@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "cat_breeder",
+    'name': "cat_cattery",
 
-    'summary': "Cat Breeder Cattery",
+    'summary': "Cat Cattery",
 
     'description': """  """,
 
@@ -21,10 +21,10 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/breeder_kitten_views.xml',
-        'views/breeder_breed_views.xml',
-        'views/breeder_kitten_list_template.xml',
-        'views/breeder_menus.xml',
+        'views/cattery_kitten_views.xml',
+        'views/cattery_breed_views.xml',
+        'views/cattery_kitten_list_template.xml',
+        'views/cattery_menus.xml',
     ],
     'application': True,
     'license': 'LGPL-3',

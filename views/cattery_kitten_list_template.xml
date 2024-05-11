@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <odoo>
-    <template id="breeder_kitten_list_template" name="breeder_kitten_list">
+    <template id="cattery_kitten_list_template" name="cattery_kitten_list">
         <div id="wrap" class="container">
             <h1>Kittens For Adoption</h1>
             <t t-foreach="kittens" t-as="kitten">
