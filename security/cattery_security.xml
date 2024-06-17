@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <record id="cattery_group_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="base.module_category_services_cattery"/>
+            <filed name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+    </data>
+</odoo>

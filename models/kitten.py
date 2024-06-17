@@ -41,6 +41,7 @@ class Kitten(models.Model):
     # --------------------------------------- Relational Fields ----------------------------------
     breed_id = fields.Many2one("cattery.breed", string="Breed")
     adopter_id = fields.Many2one("res.partner", string="Adopter")
+    caregiver_id = fields.Many2one("cattery.caregiver", string="Foster Parent")
     # --------------------------------------- Computed Fields ----------------------------------
     age = fields.Integer(string="Weeks Old", compute="_compute_age")
 
