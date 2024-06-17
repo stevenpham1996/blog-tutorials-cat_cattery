@@ -4,7 +4,7 @@
   <!--tree -->
   <record model="ir.ui.view" id="cattery_kitten_view_tree">
       <field name="name">cattery.kitten.tree</field>
-      <field name="model">cat_cattery.kitten</field>
+      <field name="model">cattery.kitten</field>
       <field name="arch" type="xml">
           <tree>
               <field name="name"/>
@@ -17,7 +17,7 @@
 <!-- Form -->
   <record model="ir.ui.view" id="cattery_kitten_view_form">
     <field name="name">cattery.kitten.form</field>
-    <field name="model">cat_cattery.kitten</field>
+    <field name="model">cattery.kitten</field>
     <field name="arch" type="xml">
       <form string="Kitten">
         <header>
@@ -55,7 +55,7 @@
   <!-- Kanban -->
   <record id="cattery_kitten_view_kanban" model="ir.ui.view">
       <field name="name">cattery.kitten.kanban</field>
-      <field name="model">cat_cattery.kitten</field>
+      <field name="model">cattery.kitten</field>
       <field name="arch" type="xml">
           <kanban string="Kittens" default_group_by="breed_id" records_draggable="0" widget="many2one_tags">
               <field name="state"/>
@@ -91,7 +91,7 @@
   <!-- Search -->
   <record id="view_search_kitten" model="ir.ui.view">
       <field name="name">cattery.kitten.search</field>
-      <field name="model">cat_cattery.kitten</field>
+      <field name="model">cattery.kitten</field>
       <field name="arch" type="xml">
           <search>
               <field name="breed_id"/>
@@ -103,7 +103,7 @@
   <!-- Action -->
   <record id="action_cattery_kitten" model="ir.actions.act_window">
       <field name="name">Kittens</field>
-      <field name="res_model">cat_cattery.kitten</field>
+      <field name="res_model">cattery.kitten</field>
       <field name="view_mode">tree,kanban,form</field>
       <field name="help" type="html">
         <p class="o_view_nocontent_smiling_face">
