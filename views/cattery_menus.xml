@@ -2,22 +2,22 @@
 
 <odoo>
     <!-- Top menu item -->
-    <menuitem id="cat_cattery_menu_root" name="Cat Cattery">
+    <menuitem id="cattery_menu_root" name="Cat Cattery">
         <!-- first level menu -->
-        <menuitem id="cat_cattery_first_level_menu" name="Kittens" sequence="5">
+        <menuitem id="cattery_first_level_menu" name="Kittens" sequence="5">
             <!-- action item -->
-            <menuitem id="cat_cattery_kitten_action" action="action_cattery_kitten" sequence="5"/>
+            <menuitem id="cattery_kitten_action" action="action_cattery_kitten" sequence="5"/>
         </menuitem>
         <!-- second level menu -->
-        <menuitem id="cat_cattery_second_level_menu" name="Breeds" sequence="10">
+        <menuitem id="cattery_second_level_menu" name="Breeds" sequence="10">
             <!-- action item -->
-            <menuitem id="cat_cattery_breed_action" action="action_cattery_breed" sequence="5"/>
+            <menuitem id="cattery_breed_action" action="action_cattery_breed" sequence="5"/>
         </menuitem>
     </menuitem>
 </odoo>
 
-<!-- <menuitem id="cat_cattery_menu_root" name="Feline cattery">
-        <menuitem id="cat_cattery_first_level_menu" name="Kittens" sequence="5">
-            <menuitem id="cat_cattery_menu_action" action="cat_cattery_action" sequence="5"/>
+<!-- <menuitem id="cattery_menu_root" name="Feline cattery">
+        <menuitem id="cattery_first_level_menu" name="Kittens" sequence="5">
+            <menuitem id="cattery_menu_action" action="cattery_action" sequence="5"/>
         </menuitem>
     </menuitem> -->
